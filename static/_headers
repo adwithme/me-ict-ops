@@ -1,0 +1,15 @@
+# Cloudflare Pages headers (Hugo copies static/_headers -> public/_headers on build).
+# Mirror of netlify.toml [headers] — keep both in sync.
+# Theme uses inline styles + one small inline module script (mermaid init),
+# so 'unsafe-inline' is required below. External scripts are still
+# allow-listed: jsdelivr (mermaid, pinned), giscus, plausible only.
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://giscus.app https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://plausible.io; frame-src https://giscus.app; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'
+
+/search.json
+  Content-Type: application/json
