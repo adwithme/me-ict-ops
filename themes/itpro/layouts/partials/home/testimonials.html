@@ -1,0 +1,6 @@
+<section class="block" id="testimonials"><div class="wrap rv">
+<div class="sec-head"><span class="num">07.</span><h2>How I Work</h2><p>principles</p></div>
+<div class="grid3">{{ range .Site.Data.testimonials }}
+<div class="card glow"><p>“{{ .quote }}”</p><p class="small"><span class="avatar" style="width:36px;height:36px;font-size:.8rem;display:inline-grid">{{ .initials }}</span> <strong>{{ .name }}</strong><br><span class="muted">{{ .title }}</span></p></div>
+{{ end }}</div>
+</div></section>

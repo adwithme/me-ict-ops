@@ -1,0 +1,17 @@
+# Work history — mirrors data/profile.yaml journey (single source for Experience section).
+# Edit here; about.html falls back to profile.journey if this file is empty.
+- year: "2014-2017"
+  title: "IT Support Professional — Judicial Council Secretariat, Nepal"
+  text: "Foundational role close to servers and users: Windows Server 2008 R2, Active Directory accounts and groups, LAN/Wi-Fi/VPN, asset tracking, and technical documentation."
+  technologies: [Windows Server 2008 R2, Active Directory, LAN, Wi-Fi, VPN]
+  impact: "Foundation: quiet, consistent work builds trust. Systems matter insofar as they serve people."
+- year: "2017-2025"
+  title: "IT Support Officer — UNDP (7 years 3 months)"
+  text: "Kept day-to-day ICT operations running through major shifts: Microsoft 365 becoming central, Intune becoming the endpoint standard, virtual collaboration going from occasional to essential."
+  technologies: [Microsoft 365, Intune, Teams, Outlook, Windows Server 2019, Active Directory, LAN, VPN, Wi-Fi, Zoom]
+  impact: "Lesson: reliability over perfection. Consistency beats heroics."
+- year: "2025-Now"
+  title: "ICT Support Executive — UNDP"
+  text: "Full-spectrum ICT operations ownership: digital workplace (M365/Outlook/Teams), Intune lifecycle, Server 2019 + AD backbone, security woven into maintenance, and documentation so solved problems stay solved."
+  technologies: [Microsoft 365, Intune, Teams, Outlook, Windows Server 2019, Active Directory, LAN, VPN, Wi-Fi]
+  impact: "Standard: technology works reliably, help gets clear answers, solved problems get documented."

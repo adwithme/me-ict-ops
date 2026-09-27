@@ -1,0 +1,110 @@
+baseURL = 'https://madhusudanupadhyay.com.np/'
+languageCode = 'en-us'
+title = 'Madhusudan Upadhyay — ICT Support Executive | Microsoft 365 & Endpoint Management'
+theme = 'itpro'
+
+enableRobotsTXT = true
+enableGitInfo = false # set true once this folder is a git repo (enables .Lastmod from git)
+summaryLength = 32
+enableEmoji = false
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[pagination]
+  pagerSize = 9
+
+[permalinks]
+  blog = '/blog/:contentbasename/'
+  projects = '/projects/:contentbasename/'
+  knowledge = '/knowledge/:contentbasename/'
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+  technology = 'technologies'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Security: raw HTML in Markdown is disabled. Content uses Markdown +
+      # shortcodes (mermaid, note) only — no raw HTML found in content/.
+      # Keep false unless a trusted shortcode needs otherwise.
+      unsafe = false
+  [markup.highlight]
+    style = 'github-dark'
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[params]
+  author = 'Madhusudan Upadhyay'
+  description = 'Madhusudan Upadhyay — ICT Support Executive, Kathmandu. 11+ years at UNDP and the Judicial Council: Microsoft 365, Intune, Windows Server, Active Directory.'
+  keywords = 'Madhusudan Upadhyay, ICT Support Nepal, Microsoft 365 Administrator Kathmandu, Intune endpoint management, Windows Server Active Directory, ITIL incident management'
+  email = 'support@madhusudanupadhyay.com.np'
+  linkedin = 'https://linkedin.com/in/madhusudanupadhyay'
+  github = 'https://github.com/madhusudanupadhyay'
+  twitter = 'https://x.com/madhusudanupadhyay'
+  siteRepo = 'https://github.com/madhusudanupadhyay/madhusudanupadhyay.com.np'
+  # TODO: Verify this opens a public booking page in an incognito window.
+  # If Microsoft gives you a different share URL, replace the whole value.
+  booking = 'https://bookings.cloud.microsoft/book/ICTSupport1@madhusudanupadhyay.com.np/'
+  defaultCover = '/images/og-default.jpg'
+  # Contact form: set via `hugo --minify -e production` or env HUGO_PARAMS_WEB3FORMSKEY.
+  # Do not commit a real key — keep the placeholder here and override at deploy time.
+  web3formsKey = 'YOUR-WEB3FORMS-KEY'
+  # Analytics (Plausible/Umami): paste snippet domain here, wired in head.html
+  plausibleDomain = ''
+  # Giscus comments: enable Discussions on your repo, then fill these.
+  # See https://giscus.app to generate IDs.
+  giscusRepo = ''
+  giscusRepoId = ''
+  giscusCategory = ''
+  giscusCategoryId = ''
+  giscusMapping = 'pathname'
+
+  [params.hero]
+    roles = ['Microsoft 365 Administration', 'Intune Endpoint Management', 'Active Directory & Identity', 'ITIL Support Operations', 'Technical Documentation']
+
+[[menus.main]]
+  name = 'About'
+  url = '/#about'
+  weight = 1
+[[menus.main]]
+  name = 'Stack'
+  url = '/#skills'
+  weight = 2
+[[menus.main]]
+  name = 'Work'
+  url = '/#projects'
+  weight = 3
+[[menus.main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 5
+[[menus.main]]
+  name = 'Guides'
+  url = '/knowledge/'
+  weight = 6
+[[menus.main]]
+  name = 'Certs'
+  url = '/#certs'
+  weight = 7
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[outputFormats.JSON]
+  baseName = 'search'
+  isPlainText = true
+  mediaType = 'application/json'
+
+[minify]
+  minifyOutput = true

@@ -1,0 +1,85 @@
+# Full certification history — newest to oldest (per LinkedIn, Sep 2026).
+- name: Ubuntu Linux Professional Certificate
+  issuer: Canonical
+  issued: Nov 2025
+  year: "2025"
+  badge: "🐧"
+  verify: ""
+  skills: [Ubuntu, Linux System Administration]
+- name: Career Essentials in System Administration by Microsoft and LinkedIn
+  issuer: Microsoft
+  issued: Nov 2025
+  year: "2025"
+  badge: "🪟"
+  verify: ""
+  skills: [System Administration, Network Administration]
+- name: Putting ITIL Into Practice — Applying ITIL 3 Foundation Concepts
+  issuer: LinkedIn
+  issued: Jun 2024
+  year: "2024"
+  badge: "📋"
+  verify: ""
+  skills: [IT Service Management]
+- name: CompTIA A+ Core 1 (220-1101) & Core 2 (220-1102)
+  issuer: LinkedIn
+  issued: Apr 2024
+  year: "2024"
+  badge: "💻"
+  verify: ""
+  skills: [Infrastructure, Computer Hardware, Networking, Cybersecurity]
+- name: ITIL v4 Foundation
+  issuer: Alison
+  issued: Apr 2024
+  year: "2024"
+  badge: "📋"
+  verify: ""
+  skills: [IT Service Management]
+- name: "Windows Server 2019: Manage, Monitor, and Maintain Servers"
+  issuer: LinkedIn
+  issued: Dec 2023
+  year: "2023"
+  badge: "🖥"
+  verify: ""
+  skills: [Windows Networking, Infrastructure]
+- name: The Fundamentals of Digital Marketing
+  issuer: Google Digital Garage
+  issued: Aug 2020
+  year: "2020"
+  badge: "📈"
+  verify: ""
+  credentialId: QKN 3NS JRA
+  skills: [Digital Marketing]
+- name: Red Hat Certified Engineer (RHCE)
+  issuer: College of Real Time Technology
+  issued: Sep 2012
+  year: "2012"
+  badge: "🎩"
+  verify: ""
+  skills: [Infrastructure]
+- name: Windows Server 2008, Server Administrator (MCITP)
+  issuer: College of Real Time Technology
+  issued: Sep 2012
+  year: "2012"
+  badge: "🏅"
+  verify: ""
+  skills: [Windows Networking, Infrastructure]
+- name: Diploma in Hardware and Networking
+  issuer: Paragon Computer System
+  issued: May 2011
+  year: "2011"
+  badge: "🔧"
+  verify: ""
+  skills: [Windows Networking, Infrastructure]
+- name: "Microsoft Office Specialist: Access 2003"
+  issuer: College of Software Engineering, Birgunj
+  issued: Sep 2009
+  year: "2009"
+  badge: "🗄"
+  verify: ""
+  skills: [Database Management System (DBMS)]
+- name: Alpha Plus
+  issuer: Birganj Institute of Information Technology
+  issued: Aug 2005
+  year: "2005"
+  badge: "🌱"
+  verify: ""

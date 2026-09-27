@@ -1,0 +1,5 @@
+{{- $idx := slice -}}
+{{- range where .Site.RegularPages "Type" "in" (slice "blog" "projects" "knowledge" "page") -}}
+{{- $idx = $idx | append (dict "title" .Title "permalink" .RelPermalink "section" .Section "summary" ((.Description | default .Plain | truncate 140))) -}}
+{{- end -}}
+{{- $idx | jsonify -}}

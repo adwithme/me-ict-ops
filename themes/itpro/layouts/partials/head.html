@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+{{ $desc := .Description | default .Params.description | default .Site.Params.description }}
+<meta name="description" content="{{ $desc | truncate 160 }}">
+{{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+<meta name="author" content="{{ .Site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#090b12">
+<!-- OG / Twitter -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ $desc | truncate 160 }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ with .Params.cover | default .Site.Params.defaultCover }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $desc | truncate 160 }}">
+{{ with .Params.cover | default .Site.Params.defaultCover }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
+{{ with .Site.Params.plausibleDomain }}{{ if ne . "" }}<script defer data-domain="{{ . }}" src="https://plausible.io/js/script.js"></script>{{ end }}{{ end }}
+<!-- perf: fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"></noscript>
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{{ if .IsHome }}{{ partial "seo/schemas-home.html" . }}{{ end }}
+{{ if eq .Section "blog" }}{{ partial "seo/schemas-article.html" . }}{{ end }}
+{{ if eq .Section "projects" }}{{ partial "seo/schemas-project.html" . }}{{ end }}
+{{ hugo.Generator }}
+{{ range .AlternativeOutputFormats -}}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink }}">
+{{ end -}}

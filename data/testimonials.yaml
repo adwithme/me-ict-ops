@@ -1,0 +1,12 @@
+- quote: Technology should work reliably when people need it.
+  name: Principle 01
+  title: Reliability first
+  initials: R1
+- quote: People asking for help should get clear answers.
+  name: Principle 02
+  title: Clear communication
+  initials: R2
+- quote: Anything worth solving is worth documenting. References available on request.
+  name: Principle 03
+  title: Documentation habit
+  initials: R3

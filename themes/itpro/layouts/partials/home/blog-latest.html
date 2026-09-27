@@ -1,0 +1,13 @@
+<section class="block" id="blog-latest"><div class="wrap rv">
+<div class="sec-head"><span class="num">06.</span><h2>Latest from the Blog</h2><p>every post tied to a real milestone</p></div>
+<div class="post-list">
+{{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+<article class="card post-card"><div>
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min · {{ delimit (.Params.categories | default slice) ", " }}</p>
+<h3 style="margin:.2em 0"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h3>
+<p class="small muted">{{ .Description }}</p></div>
+<a class="btn ghost" href="{{ .RelPermalink }}">Read</a></article>
+{{ end }}
+</div>
+<p><a href="/blog/">All posts + categories →</a></p>
+</div></section>

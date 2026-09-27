@@ -1,0 +1,19 @@
+{{ $p := index .Site.Data "profile" }}
+<section class="hero" aria-label="Intro">
+<div class="wrap hero-grid">
+  <div>
+    <p class="kicker">$ whoami: Kathmandu, NP · UTC+5:45</p>
+    <h1>Madhusudan Upadhyay</h1>
+    <p class="role-line">ICT Support Executive · UNDP · Kathmandu, Nepal</p>
+    <p class="focus-line"><span class="muted mono">Focus:</span> {{ range $i, $r := .Site.Params.hero.roles }}{{ if $i }} <span class="muted">·</span> {{ end }}<span class="focus-item" style="animation-delay:{{ mul $i 250 }}ms">{{ $r }}</span>{{ end }}</p>
+    <p class="tagline"><em>{{ $p.tagline }}</em></p>
+    <p class="lede">{{ $p.valueProp }}</p>
+    <p class="small mono muted" style="margin-top:14px;margin-bottom:0">Now: <span style="color:var(--accent2)">● {{ $p.availability }}</span></p>
+    <p style="margin-top:12px"><a class="btn" href="{{ .Site.Params.booking }}" style="white-space:nowrap">📅 book a call →</a></p>
+  </div>
+  <div class="terminal" aria-label="Fake terminal">
+    <div class="t-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span style="margin-left:8px">madhusudan@ict-ops: ~</span></div>
+    <div class="t-body" id="term-out">$ whoami…</div>
+  </div>
+</div>
+</section>

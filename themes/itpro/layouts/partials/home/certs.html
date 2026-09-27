@@ -1,0 +1,9 @@
+<section class="block" id="certs"><div class="wrap rv">
+<div class="sec-head"><span class="num">04.</span><h2>Certifications & Achievements</h2><p>{{ len .Site.Data.certifications }} documented · newest first</p></div>
+<div class="certs">
+{{ range .Site.Data.certifications }}
+{{ if .name }}<div class="card glow"><div class="badge">{{ .badge }}</div><strong>{{ .name }}</strong><p class="small muted">{{ .issuer }} · {{ .issued | default .year }}</p>{{ with .note }}<p class="small muted">{{ . }}</p>{{ end }}{{ with .skills }}<p class="small mono muted">{{ delimit . ", " }}</p>{{ end }}{{ with .credentialId }}<p class="small mono muted">ID: {{ . }}</p>{{ end }}{{ with .verify }}{{ if ne . "" }}{{ if ne . "#" }}<a class="small mono" href="{{ . }}" target="_blank" rel="noopener">Verify →</a>{{ end }}{{ end }}{{ end }}</div>{{ end }}
+{{ end }}
+</div>
+<p class="small muted">Full history from LinkedIn — newest first. Verify links added where available.</p>
+</div></section>

@@ -1,0 +1,35 @@
+{{ define "main" }}
+<div class="wrap" style="padding:40px 20px;max-width:780px">
+<nav class="mono small muted" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/{{ .Section }}/">{{ .Section | title }}</a> / {{ .Title }}</nav>
+<h1>{{ .Title }}</h1>
+{{ with .Description }}<p class="muted">{{ . }}</p>{{ end }}
+{{ if or (eq .Section "blog") (eq .Section "knowledge") }}
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min read · {{ .WordCount }} words · difficulty: {{ .Params.difficulty | default "Intermediate" }}</p>
+<p>{{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}{{ range .Params.categories }}<span class="tag hot">{{ . }}</span>{{ end }}</p>
+{{ if .TableOfContents }}<details class="toc" open><summary><strong>Table of contents</strong></summary>{{ .TableOfContents }}</details>{{ end }}
+{{ end }}
+<article>{{ .Content }}</article>
+{{ if or (eq .Section "blog") (eq .Section "knowledge") }}
+<hr>
+<div class="share"><strong>Share:</strong>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" target="_blank" rel="noopener">LinkedIn</a> ·
+<a href="https://twitter.com/intent/tweet?url={{ .Permalink }}&text={{ .Title }}" target="_blank" rel="noopener">Twitter/X</a> ·
+<a href="https://www.reddit.com/submit?url={{ .Permalink }}&title={{ .Title }}" target="_blank" rel="noopener">Reddit</a> ·
+<a href="https://dev.to/new?title={{ .Title }}" target="_blank" rel="noopener">Dev.to</a></div>
+{{ with .Params.relatedProjects }}<div class="card"><h3>🔗 Related Projects</h3><ul>{{ range . }}<li><a href="/projects/{{ . | urlize }}/">{{ . }}</a></li>{{ end }}</ul></div>{{ end }}
+{{ with .Params.faq }}<h2>FAQ</h2>{{ range . }}<details><summary><strong>{{ .q }}</strong></summary><p>{{ .a }}</p></details>{{ end }}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ range $i, $f := . }}{{ if $i }},{{ end }}{"@type":"Question","name":{{ $f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ $f.a | jsonify }}}}{{ end }}]}</script>{{ end }}
+<div class="authorbox"><div class="avatar">MU</div><div><strong>Madhusudan Upadhyay</strong><p class="small muted">ICT Support Executive · 11+ yrs · M365 · Intune · Windows Server & AD · Kathmandu. <a href="/#contact">Work with me →</a></p><p class="small mono">📬 New posts via <a href="/blog/index.xml">RSS</a> · <a href="/uses/">/uses</a></p></div></div>
+{{ $rel := .Site.RegularPages.Related . | first 3 }}{{ with $rel }}<h2>Related reading</h2><ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>{{ end }}
+{{ if $.Site.Params.giscusRepo }}{{ if ne $.Site.Params.giscusRepo "" }}
+<div id="comments" style="margin-top:32px"><h2>Comments</h2>
+<script src="https://giscus.app/client.js" data-repo="{{ $.Site.Params.giscusRepo }}" data-repo-id="{{ $.Site.Params.giscusRepoId }}" data-category="{{ $.Site.Params.giscusCategory }}" data-category-id="{{ $.Site.Params.giscusCategoryId }}" data-mapping="{{ $.Site.Params.giscusMapping }}" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>
+</div>{{ end }}{{ else }}<!-- Comments: set [params] giscusRepo + IDs in hugo.toml to enable Giscus -->{{ end }}
+{{ else if eq .Section "projects" }}
+<p>{{ range .Params.technologies }}<span class="tag hot">{{ . }}</span>{{ end }}</p>
+{{ with .Params.environment }}<p class="mono small muted">🌍 Environment: {{ . }}</p>{{ end }}
+{{ with .Params.metrics }}<div class="card"><h3>What this covers</h3><ul>{{ range . }}<li class="metric">{{ . }}</li>{{ end }}</ul></div>{{ end }}
+<p class="mono small">{{ with .Params.repo }}<a href="{{ . }}">GitHub repo →</a>{{ end }} {{ with .Params.demo }}· <a href="{{ . }}">Live demo →</a>{{ end }}</p>
+{{ end }}
+</div>
+{{ end }}

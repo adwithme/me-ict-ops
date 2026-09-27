@@ -1,0 +1,51 @@
+- name: Microsoft 365 & Collaboration
+  icon: ☁
+  skills:
+    - name: Microsoft 365 accounts, licensing & groups
+      level: 92
+      years: 8
+    - name: Outlook & Teams user support
+      level: 90
+      years: 8
+    - name: Identity & access control (with AD)
+      level: 88
+      years: 8
+    - name: Zoom & virtual-event setup
+      level: 85
+      years: 5
+- name: Endpoint & Systems
+  icon: 🖥
+  skills:
+    - name: Intune enrollment, profiles & compliance
+      level: 88
+      years: 6
+    - name: Windows Server 2019 / 2008 R2
+      level: 90
+      years: 11
+    - name: Active Directory users, groups & reviews
+      level: 92
+      years: 11
+    - name: OS deployment & app support
+      level: 84
+      years: 8
+    - name: Linux grounding (RHCE, Ubuntu Professional)
+      level: 75
+      years: 6
+- name: Network, Security & Operations
+  icon: ⚙
+  skills:
+    - name: LAN / Wi-Fi / VPN troubleshooting
+      level: 90
+      years: 11
+    - name: Patching & endpoint protection
+      level: 86
+      years: 8
+    - name: ITIL incident / request handling
+      level: 90
+      years: 9
+    - name: Asset lifecycle & vendor coordination
+      level: 88
+      years: 9
+    - name: Documentation, runbooks & checklists
+      level: 94
+      years: 11

@@ -1,0 +1,6 @@
+{{ if .IsPage }}<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TechArticle","headline":{{ .Title | jsonify }},"description":{{ (.Description | default .Summary) | jsonify }},"author":{"@type":"Person","name":"Madhusudan Upadhyay","jobTitle":"ICT Support Executive","url":"{{ .Site.BaseURL }}"},"datePublished":"{{ .Date.Format "2006-01-02" }}","dateModified":"{{ .Lastmod.Format "2006-01-02" }}","mainEntityOfPage":"{{ .Permalink }}","proficiencyLevel":{{ (.Params.difficulty | default "Intermediate") | jsonify }}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"{{ .Site.BaseURL }}"},{"@type":"ListItem","position":2,"name":"Blog","item":"{{ .Site.BaseURL }}blog/"},{"@type":"ListItem","position":3,"name":{{ .Title | jsonify }},"item":"{{ .Permalink }}"}]}
+</script>{{ end }}

@@ -1,0 +1,58 @@
+{{ define "main" }}
+<div class="wrap" style="padding:40px 20px">
+<h1>{{ .Title }}</h1>
+{{ with .Description }}<p class="muted">{{ . }}</p>{{ end }}
+{{ .Content }}
+{{ if eq .Section "blog" }}
+<div class="list-layout">
+<aside class="side-cats" aria-label="Categories">
+<h3 class="mono small muted">Categories</h3>
+{{ range .Site.Taxonomies.categories }}<a class="side-cat" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>{{ end }}
+</aside>
+<div>
+<div class="post-list">{{ range .Paginator.Pages }}
+<article class="card post-card"><div>
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min · {{ delimit (.Params.categories | default slice) ", " }}</p>
+<h2 style="margin:.2em 0;font-size:1.2rem"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h2>
+<p class="small muted">{{ .Description }}</p>
+<p>{{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}</p></div>
+<a class="btn ghost" href="{{ .RelPermalink }}">Read</a></article>
+{{ end }}</div>
+{{ template "_internal/pagination.html" . }}
+</div>
+</div>
+{{ else if eq .Section "projects" }}
+<div class="proj-grid">{{ range sort .Pages "Weight" }}
+<article class="card glow"><p class="mono small" style="color:var(--accent2)">{{ delimit (.Params.technologies | default slice) ", " }}</p>
+<h2 style="font-size:1.15rem"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h2>
+<p class="small muted">{{ .Description }}</p>
+{{ with .Params.metrics }}<p class="metric">📈 {{ delimit . " · " }}</p>{{ end }}</article>
+{{ end }}</div>
+ {{ else if eq .Section "knowledge" }}
+<div class="list-layout">
+<aside class="side-cats" aria-label="Categories">
+<h3 class="mono small muted">Categories</h3>
+{{ range .Site.Taxonomies.categories }}<a class="side-cat" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>{{ end }}
+</aside>
+<div>
+<div class="post-list">{{ range (.Paginate .Pages).Pages }}
+<article class="card post-card"><div>
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min · {{ delimit (.Params.categories | default slice) ", " }}</p>
+<h2 style="margin:.2em 0;font-size:1.2rem"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h2>
+<p class="small muted">{{ .Description }}</p>
+<p>{{ range .Params.tags | first 5 }}<span class="tag">#{{ . }}</span>{{ end }}</p></div>
+<a class="btn ghost" href="{{ .RelPermalink }}">Open</a></article>
+{{ end }}</div>
+{{ template "_internal/pagination.html" . }}
+</div>
+</div>
+{{ else }}<p class="muted">{{ len .Pages }} {{ if eq (len .Pages) 1 }}entry{{ else }}entries{{ end }} filed under “{{ .Title }}”.</p>
+<div class="post-list">{{ range .Pages }}
+<article class="card post-card"><div>
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min</p>
+<h2 style="margin:.2em 0;font-size:1.2rem"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h2>
+{{ with .Description }}<p class="small muted">{{ . }}</p>{{ end }}</div>
+<a class="btn ghost" href="{{ .RelPermalink }}">Open</a></article>
+{{ end }}</div>{{ end }}
+</div>
+{{ end }}

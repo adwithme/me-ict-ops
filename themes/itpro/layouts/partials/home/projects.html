@@ -1,0 +1,22 @@
+<section class="block" id="projects"><div class="wrap rv">
+<div class="sec-head"><span class="num">03.</span><h2>Featured Projects</h2><p>the work, written up properly</p></div>
+<div class="filters" role="group" aria-label="Filter projects">
+  <button class="on" data-filter-btn="all">All</button>
+  <button data-filter-btn="administration">M365 Admin</button>
+  <button data-filter-btn="endpoint">Endpoints</button>
+  <button data-filter-btn="identity">Identity & Access</button>
+  <button data-filter-btn="operations">Operations</button>
+</div>
+<div class="proj-grid">
+{{ range first 6 (sort (where .Site.RegularPages "Section" "projects") "Weight") }}
+  <article class="card glow" data-cat="{{ delimit (.Params.categories | default slice) " " | lower }}">
+    <p class="mono small" style="color:var(--accent2)">{{ delimit .Params.technologies ", " }}</p>
+    <h3><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h3>
+    <p class="small muted">{{ .Description }}</p>
+    {{ with .Params.metrics }}<p class="metric">📈 {{ delimit . " · " }}</p>{{ end }}
+    <p class="small mono"><a href="{{ .RelPermalink }}">Read Case Study →</a>{{ with .Params.repo }} · <a href="{{ . }}">GitHub</a>{{ end }}{{ with .Params.demo }} · <a href="{{ . }}">Live Demo</a>{{ end }}</p>
+  </article>
+{{ end }}
+</div>
+<p><a class="btn ghost" href="/projects/">All projects →</a></p>
+</div></section>

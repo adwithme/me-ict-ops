@@ -1,0 +1,12 @@
+name = 'ITPro — Modern Tech Professional Hugo Theme'
+license = 'MIT'
+licenselink = 'https://github.com/madhusudanupadhyay/itpro/blob/main/LICENSE'
+description = 'Dark-mode-first, performance-obsessed Hugo theme for IT professionals: portfolio + career blog, Cmd+K palette, JSON-LD SEO, Mermaid, Giscus.'
+homepage = 'https://madhusudanupadhyay.com.np/'
+tags = ['portfolio', 'blog', 'dark-mode', 'seo', 'hugo', 'it', 'microsoft-365']
+features = ['command-palette', 'json-ld', 'mermaid', 'giscus', 'related-content', 'search-index']
+min_version = '0.120.0'
+
+[author]
+  name = 'Madhusudan Upadhyay'
+  homepage = 'https://madhusudanupadhyay.com.np/'

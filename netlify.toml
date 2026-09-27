@@ -1,0 +1,29 @@
+[build]
+  command = "hugo --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.155.2"
+  HUGO_EXTENDED = "true"
+
+# Contact form key injected at deploy time — set in Netlify UI, never commit.
+# HUGO_PARAMS_WEB3FORMSKEY = "your-key"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=()"
+    # Theme uses inline styles + one small inline module script (mermaid init),
+    # so 'unsafe-inline' is required below. External scripts are still
+    # allow-listed: jsdelivr (mermaid, pinned), giscus, plausible only.
+    # If you remove mermaid/giscus/plausible, tighten the matching directive.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://giscus.app https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com https://plausible.io; frame-src https://giscus.app; form-action 'self' https://api.web3forms.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/search.json"
+  [headers.values]
+    Content-Type = "application/json"

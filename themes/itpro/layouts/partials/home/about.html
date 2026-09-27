@@ -1,0 +1,17 @@
+{{ $p := index .Site.Data "profile" }}
+<section class="block" id="about"><div class="wrap rv">
+<div class="sec-head"><span class="num">01.</span><h2>About Me</h2><p>2014 to now, no shortcuts</p></div>
+<div class="grid2">
+  <div>
+    <p>{{ $p.philosophy }}</p>
+    <div class="stats" style="margin-top:18px">
+      {{ range $p.stats }}<div class="card stat"><b data-count="{{ .value }}" data-suffix="{{ .suffix }}">0</b><br><span class="small muted">{{ .label }}</span></div>{{ end }}
+    </div>
+  </div>
+  <div class="timeline">
+    {{ range $p.journey }}<div class="t-item card"><p class="mono small" style="color:var(--accent2)">{{ .year }}</p><strong>{{ .title }}</strong><p class="small muted">{{ .text }}</p>
+    {{ with .technologies }}<p>{{ range . }}<span class="tag">{{ . }}</span>{{ end }}</p>{{ end }}
+    {{ with .impact }}<p class="metric">✅ {{ . }}</p>{{ end }}</div>{{ end }}
+  </div>
+</div>
+</div></section>

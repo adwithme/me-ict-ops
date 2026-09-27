@@ -1,0 +1,11 @@
+<section class="block" id="skills"><div class="wrap rv">
+<div class="sec-head"><span class="num">02.</span><h2>Technical Stack</h2><p>what I run in production, and for how long</p></div>
+<div class="grid3">
+{{ range .Site.Data.skills }}
+  <div class="card glow"><h3>{{ .icon }} {{ .name }}</h3>
+  {{ range .skills }}<div class="skill"><div class="row"><span>{{ .name }}</span><span class="mono muted">{{ .level }}% · {{ .years }}y</span></div><div class="bar"><i data-w="{{ .level }}"></i></div></div>{{ end }}
+  </div>
+{{ end }}
+</div>
+<p class="small muted mono">Also in the mix: Zoom & virtual events, asset lifecycle, backup verification. Full setup in <a href="/uses/">/uses</a>. Learning now: advanced M365, Linux admin, cloud fundamentals.</p>
+</div></section>

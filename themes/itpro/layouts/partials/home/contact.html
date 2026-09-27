@@ -1,0 +1,23 @@
+<section class="block" id="contact"><div class="wrap rv">
+<div class="sec-head"><span class="num">08.</span><h2>Contact</h2><p>straight to my inbox</p></div>
+<div class="grid2">
+<form class="card" name="contact" method="POST" action="https://api.web3forms.com/submit">
+{{ "<!-- Set HUGO_PARAMS_WEB3FORMSKEY at deploy time; see hugo.toml [params] web3formsKey -->" | safeHTML }}
+<input type="hidden" name="access_key" value="{{ .Site.Params.web3formsKey }}">
+<input type="hidden" name="subject" value="New message from Madhusudan Upadhyay contact form">
+<p class="mono small muted">contact.form: spam-protected </p>
+<div class="f"><label for="n">Name</label><input id="n" name="name" required autocomplete="name"></div>
+<div class="f"><label for="e">Work email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+<input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="f"><label for="m">Mission / problem</label><textarea id="m" name="message" rows="5" required placeholder="e.g. new-staff onboarding checklist, Intune enrollment issue, Teams call diagnostics…"></textarea></div>
+<button class="btn" type="submit">Send message →</button>
+</form>
+<div>
+<div class="card"><h3>Elsewhere</h3><p class="mono small">
+<a href="https://linkedin.com/in/madhusudanupadhyay" target="_blank" rel="noopener">LinkedIn</a></p>
+<p><a class="btn" href="{{ .Site.Params.booking }}" target="_blank" rel="noopener">📅 Book a time (Bookings)</a></p>
+<p class="small muted">✉ {{ .Site.Params.email }} · 📍 Kathmandu, Nepal</p>
+<details class="small"><summary class="mono">🔑 PGP public key</summary><p class="muted">Prefer encrypted mail. Write to me and I'll send my PGP fingerprint and public key. This form never asks for secrets.</p></details></div>
+</div>
+</div>
+</div></section>

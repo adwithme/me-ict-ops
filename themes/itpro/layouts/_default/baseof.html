@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}" data-theme="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+<canvas id="coderain" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+{{ partial "header.html" . }}
+<main id="main">{{ block "main" . }}{{ end }}</main>
+{{ partial "footer.html" . }}
+{{ partial "palette.html" . }}
+{{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{ if .Store.Get "hasMermaid" }}
+{{ "<!-- Mermaid pinned to exact version; entry-chunk verified via modulepreload SRI. Chunk ./mermaid-*.js resolves relative to this pinned version. Bump version + hash together. -->" | safeHTML }}
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs" integrity="sha384-ngTqQFGZO/UNk+6W7oe9xpqFSOUHQUL8VAb6oHZdH492UegObDwoIkWN/nySekUR" crossorigin="anonymous">
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.8/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,theme:'dark'});</script>
+{{ end }}
+</body>
+</html>

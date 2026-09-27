@@ -1,0 +1,37 @@
+name: Madhusudan Upadhyay
+role: ICT Support Executive
+tagline: "Making workplace technology work reliably, securely, and for real people."
+valueProp: "11+ years keeping UNDP and Nepal's Judicial Council running. M365, Intune, Windows Server, Active Directory: the unglamorous stuff, done right and written down."
+location: Kathmandu, Nepal
+email: support@madhusudanupadhyay.com.np
+availability: ICT Support Executive at UNDP. Happy to talk shop
+stats:
+  - value: 11
+    suffix: "+"
+    label: Years Experience
+  - value: 12
+    suffix: ""
+    label: Documented Certifications
+  - value: 20
+    suffix: "+"
+    label: Knowledge Base Guides
+  - value: 8
+    suffix: ""
+    label: Core Responsibility Areas
+journey:
+  - year: "2014-2017"
+    title: "IT Support Professional — Judicial Council Secretariat, Nepal"
+    text: "Foundational role close to servers and users: Windows Server 2008 R2, Active Directory accounts and groups, LAN/Wi-Fi/VPN, asset tracking, and technical documentation. Learned outcome thinking: not 'system is working' but 'can people do their jobs?'"
+    technologies: [Windows Server 2008 R2, Active Directory, LAN, Wi-Fi, VPN]
+    impact: "Foundation: quiet, consistent work builds trust. Systems matter insofar as they serve people."
+  - year: "2017-2025"
+    title: "IT Support Officer — UNDP (7 years 3 months)"
+    text: "Kept day-to-day ICT operations running through major shifts: Microsoft 365 becoming central, Intune becoming the endpoint standard, virtual collaboration going from occasional to essential. Joiner/mover/leaver, asset lifecycle, Teams/Zoom events, ITIL incident flow."
+    technologies: [Microsoft 365, Intune, Teams, Outlook, Windows Server 2019, Active Directory, LAN, VPN, Wi-Fi, Zoom]
+    impact: "Lesson: reliability over perfection. Consistency beats heroics; users doing their jobs without fighting technology is success."
+  - year: "2025-Now"
+    title: "ICT Support Executive — UNDP"
+    text: "Full-spectrum ICT operations ownership: digital workplace (M365/Outlook/Teams), Intune lifecycle, Server 2019 + AD backbone, security woven into maintenance, and documentation so solved problems stay solved."
+    technologies: [Microsoft 365, Intune, Teams, Outlook, Windows Server 2019, Active Directory, LAN, VPN, Wi-Fi]
+    impact: "Standard: technology works reliably, help gets clear answers, solved problems get documented."
+philosophy: "Technology should work reliably when people need it. People asking for help should get clear answers. Security is built into regular operations, not treated as an event. Anything worth solving is worth documenting. When something is solved, it is written down, so the next person never starts from scratch."
