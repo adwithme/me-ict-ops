@@ -7,7 +7,7 @@
 <div class="list-layout">
 <aside class="side-cats" aria-label="Categories">
 <h3 class="mono small muted">Categories</h3>
-{{ range .Site.Taxonomies.categories }}<a class="side-cat" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>{{ end }}
+{{ $bcats := slice }}{{ range where .Site.RegularPages "Section" "blog" }}{{ range (.Params.categories | default slice) }}{{ $bcats = $bcats | append . }}{{ end }}{{ end }}{{ range ($bcats | uniq | sort) }}<a class="side-cat" href="/categories/{{ . | urlize }}/">{{ . }} <span class="muted">({{ len (where (where $.Site.RegularPages "Section" "blog") "Params.categories" "intersect" (slice .)) }})</span></a>{{ end }}
 </aside>
 <div>
 <div class="post-list">{{ range .Paginator.Pages }}
@@ -30,14 +30,14 @@
 {{ end }}</div>
  {{ else if eq .Section "knowledge" }}
 <div class="list-layout">
-<aside class="side-cats" aria-label="Categories">
-<h3 class="mono small muted">Categories</h3>
-{{ range .Site.Taxonomies.categories }}<a class="side-cat" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>{{ end }}
+<aside class="side-cats" aria-label="Topics">
+<h3 class="mono small muted">Topics</h3>
+{{ range .Site.Taxonomies.topics }}<a class="side-cat" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <span class="muted">({{ .Count }})</span></a>{{ end }}
 </aside>
 <div>
 <div class="post-list">{{ range (.Paginate .Pages).Pages }}
 <article class="card post-card"><div>
-<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min · {{ delimit (.Params.categories | default slice) ", " }}</p>
+<p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min · {{ delimit (.Params.topics | default slice) ", " }}</p>
 <h2 style="margin:.2em 0;font-size:1.2rem"><a href="{{ .RelPermalink }}" style="color:inherit">{{ .Title }}</a></h2>
 <p class="small muted">{{ .Description }}</p>
 <p>{{ range .Params.tags | first 5 }}<span class="tag">#{{ . }}</span>{{ end }}</p></div>

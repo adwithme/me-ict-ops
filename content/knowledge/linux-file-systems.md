@@ -3,7 +3,7 @@ title: "Introduction to Linux File Systems"
 date: 2022-07-27
 description: "Understanding Linux file system hierarchy, common file systems (ext4, XFS, Btrfs), mounting, permissions, and disk management fundamentals."
 tags: ["Linux", "File Systems", "ext4", "XFS", "Btrfs", "Mounting", "Permissions", "Disk Management"]
-categories: ["Linux", "System Administration", "Storage"]
+topics: ["Linux", "System Administration", "Storage"]
 draft: false
 toc: true
 ---

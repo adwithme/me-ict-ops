@@ -3,7 +3,7 @@ title: "OneDrive for Business on Web - Part II: Advanced Features"
 date: 2022-08-02
 description: "Advanced OneDrive for Business web features - automation with Power Automate, file requests, sensitivity labels, advanced sharing, and integration with Teams/SharePoint."
 tags: ["OneDrive", "OneDrive for Business", "Power Automate", "Automation", "File Requests", "Sensitivity Labels", "Microsoft 365"]
-categories: ["Microsoft 365", "Cloud Storage", "Automation"]
+topics: ["Microsoft 365", "Cloud Storage", "Automation"]
 draft: false
 toc: true
 ---

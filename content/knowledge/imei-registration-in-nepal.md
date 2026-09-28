@@ -3,7 +3,7 @@ title: "Online Mobile Registration in Nepal - Step by Step"
 date: 2022-06-25
 description: "Step-by-step guide to registering your mobile device IMEI in Nepal's MDMS (Mobile Device Management System) for legal use on Nepali networks."
 tags: ["Nepal", "MDMS", "IMEI Registration", "Mobile", "NTA", "Telecommunications"]
-categories: ["Nepal", "Mobile", "Government Services"]
+topics: ["Nepal", "Mobile", "Government Services"]
 draft: false
 toc: true
 ---

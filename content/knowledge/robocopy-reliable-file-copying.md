@@ -3,7 +3,7 @@ title: "Robocopy: Reliable File Copying Utility"
 date: 2024-05-07
 description: "Complete guide to Robocopy (Robust File Copy) - Microsoft's command-line tool for reliable file replication, mirroring, and migration with resume capability."
 tags: ["robocopy", "Windows", "IT Professional", "File Copy", "Migration", "Backup", "Command Line"]
-categories: ["Windows", "System Administration", "Storage"]
+topics: ["Windows", "System Administration", "Storage"]
 draft: false
 toc: true
 ---

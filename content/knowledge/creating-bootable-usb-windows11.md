@@ -3,7 +3,7 @@ title: "Creating Bootable USB Drive of Windows 11 on Any PC"
 date: 2022-08-04
 description: "Create a Windows 11 bootable USB with Media Creation Tool, Rufus or the command line. TPM and Secure Boot bypass notes for unsupported hardware."
 tags: ["Windows", "Windows 11", "Bootable USB", "Installation", "Rufus", "Media Creation Tool", "TPM Bypass"]
-categories: ["Windows", "Installation", "Deployment"]
+topics: ["Windows", "Installation", "Deployment"]
 draft: false
 toc: true
 ---

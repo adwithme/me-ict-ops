@@ -3,7 +3,7 @@ title: "OneDrive for Business on Web - Part I: Getting Started"
 date: 2022-08-02
 description: "Introduction to OneDrive for Business web interface - navigation, upload, organization, sharing basics, and sync client overview."
 tags: ["OneDrive", "OneDrive for Business", "Microsoft 365", "Cloud Storage", "File Sharing", "Collaboration"]
-categories: ["Microsoft 365", "Cloud Storage", "Productivity"]
+topics: ["Microsoft 365", "Cloud Storage", "Productivity"]
 draft: false
 toc: true
 ---

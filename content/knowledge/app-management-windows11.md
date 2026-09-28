@@ -3,7 +3,7 @@ title: "The App Management on Windows 11"
 date: 2022-08-07
 description: "Managing applications in Windows 11 - installation, uninstallation, default apps, startup management, and winget package manager."
 tags: ["Windows", "Windows 11", "App Management", "winget", "Startup", "Default Apps"]
-categories: ["Windows", "System Administration"]
+topics: ["Windows", "System Administration"]
 draft: false
 toc: true
 ---

@@ -5,7 +5,7 @@
 {{ with .Description }}<p class="muted">{{ . }}</p>{{ end }}
 {{ if or (eq .Section "blog") (eq .Section "knowledge") }}
 <p class="mono small muted">{{ .Date.Format "2006-01-02" }} · {{ .ReadingTime }} min read · {{ .WordCount }} words · difficulty: {{ .Params.difficulty | default "Intermediate" }}</p>
-<p>{{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}{{ range .Params.categories }}<span class="tag hot">{{ . }}</span>{{ end }}</p>
+<p>{{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}{{ if eq .Section "knowledge" }}{{ range .Params.topics }}<span class="tag hot">{{ . }}</span>{{ end }}{{ else }}{{ range .Params.categories }}<span class="tag hot">{{ . }}</span>{{ end }}{{ end }}</p>
 {{ if .TableOfContents }}<details class="toc" open><summary><strong>Table of contents</strong></summary>{{ .TableOfContents }}</details>{{ end }}
 {{ end }}
 <article>{{ .Content }}</article>
@@ -19,8 +19,11 @@
 {{ with .Params.relatedProjects }}<div class="card"><h3>🔗 Related Projects</h3><ul>{{ range . }}<li><a href="/projects/{{ . | urlize }}/">{{ . }}</a></li>{{ end }}</ul></div>{{ end }}
 {{ with .Params.faq }}<h2>FAQ</h2>{{ range . }}<details><summary><strong>{{ .q }}</strong></summary><p>{{ .a }}</p></details>{{ end }}
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ range $i, $f := . }}{{ if $i }},{{ end }}{"@type":"Question","name":{{ $f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ $f.a | jsonify }}}}{{ end }}]}</script>{{ end }}
-<div class="authorbox"><div class="avatar">MU</div><div><strong>Madhusudan Upadhyay</strong><p class="small muted">ICT Support Executive · 11+ yrs · M365 · Intune · Windows Server & AD · Kathmandu. <a href="/#contact">Work with me →</a></p><p class="small mono">📬 New posts via <a href="/blog/index.xml">RSS</a> · <a href="/uses/">/uses</a></p></div></div>
-{{ $rel := .Site.RegularPages.Related . | first 3 }}{{ with $rel }}<h2>Related reading</h2><ul>{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>{{ end }}
+{{ $page := . }}{{ $pkey := "topics" }}{{ $h := "Related guides" }}{{ if eq .Section "blog" }}{{ $pkey = "categories" }}{{ $h = "Related posts" }}{{ end }}
+{{ $mine := index $page.Params $pkey | default slice }}{{ $tags := $page.Params.tags | default slice }}
+{{ $pool := where (where .Site.RegularPages "Section" $page.Section) ".Permalink" "!=" $page.Permalink }}
+{{ $ranked := slice }}{{ range $pool }}{{ $t := index .Params $pkey | default slice }}{{ $g := .Params.tags | default slice }}{{ $ranked = $ranked | append (dict "p" . "r" (add (mul (len (intersect $mine $t)) 1000) (len (intersect $tags $g))) "d" .Date.Unix) }}{{ end }}
+{{ $sorted := sort (sort $ranked "d" "desc") "r" "desc" }}{{ with first 3 $sorted }}<h2>{{ $h }}</h2><ul>{{ range . }}<li><a href="{{ .p.RelPermalink }}">{{ .p.Title }}</a></li>{{ end }}</ul>{{ end }}
 {{ if $.Site.Params.giscusRepo }}{{ if ne $.Site.Params.giscusRepo "" }}
 <div id="comments" style="margin-top:32px"><h2>Comments</h2>
 <script src="https://giscus.app/client.js" data-repo="{{ $.Site.Params.giscusRepo }}" data-repo-id="{{ $.Site.Params.giscusRepoId }}" data-category="{{ $.Site.Params.giscusCategory }}" data-category-id="{{ $.Site.Params.giscusCategoryId }}" data-mapping="{{ $.Site.Params.giscusMapping }}" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" async></script>

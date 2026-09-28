@@ -3,7 +3,7 @@ title: "About Microsoft Word: Complete Guide"
 date: 2025-05-09
 description: "Microsoft Word features, shortcuts, styles, mail merge and co-authoring, explained for people who write real documents. Part of the Microsoft 365 know-how."
 tags: ["MSOffice", "Word", "Productivity", "Document Processing"]
-categories: ["Microsoft 365", "Office Applications"]
+topics: ["Microsoft 365", "Office Applications"]
 draft: false
 toc: true
 ---

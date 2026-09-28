@@ -3,7 +3,7 @@ title: "SOPHOS XG Firewall SSLVPN Configuration"
 date: 2022-08-05
 description: "Step-by-step guide to configuring SSL VPN on Sophos XG Firewall for secure remote access with user authentication, client settings, and policy rules."
 tags: ["Firewall", "Sophos", "SSL VPN", "Remote Access", "Network Security", "VPN"]
-categories: ["Network Security", "Firewall", "VPN"]
+topics: ["Network Security", "Firewall", "VPN"]
 draft: false
 toc: true
 ---

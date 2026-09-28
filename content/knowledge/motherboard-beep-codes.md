@@ -3,7 +3,7 @@ title: "Motherboard Beep Codes - Complete Reference"
 date: 2022-07-29
 description: "Comprehensive reference guide to motherboard BIOS beep codes for AMI, Award, Phoenix, and other BIOS manufacturers - essential for hardware troubleshooting."
 tags: ["Motherboard", "Beep Codes", "BIOS", "POST", "Hardware Troubleshooting", "Diagnostics"]
-categories: ["Hardware", "Troubleshooting", "Diagnostics"]
+topics: ["Hardware", "Troubleshooting", "Diagnostics"]
 draft: false
 toc: true
 ---

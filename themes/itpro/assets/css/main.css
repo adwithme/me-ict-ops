@@ -117,6 +117,13 @@ pre code{font-family:var(--mono);font-size:.85rem}
 .authorbox{display:flex;gap:14px;align-items:center;border:1px solid var(--card-border);border-radius:12px;padding:16px;background:var(--card)}
 .avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:#fff}
 .share{display:flex;gap:8px;flex-wrap:wrap}
+/* pagination (Hugo _internal/pagination.html: ul.pagination > li.page-item > a.page-link) */
+ul.pagination{list-style:none;margin:28px 0 0;padding:0;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+ul.pagination .page-item{margin:0;padding:0}
+ul.pagination .page-link{display:inline-grid;place-items:center;min-width:40px;height:40px;padding:0 12px;border:1px solid var(--card-border);border-radius:10px;background:var(--card);color:var(--text);font-family:var(--mono);font-size:.85rem;text-decoration:none;cursor:pointer}
+ul.pagination a.page-link:hover{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+ul.pagination .page-item.active .page-link{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+ul.pagination .page-item.disabled .page-link{opacity:.35;cursor:not-allowed}
 /* cmd palette */
 #palette{position:fixed;inset:0;display:none;place-items:start center;padding-top:12vh;background:rgba(0,0,0,.55);z-index:99}
 #palette.open{display:grid}
@@ -136,6 +143,12 @@ label{font-size:.88rem;color:var(--muted)} form .f{margin-bottom:12px}
 @media(max-width:960px){.hero-grid,.grid2,.grid3,.proj-grid,.certs,.stats{grid-template-columns:1fr 1fr}.links{display:none}.mnav{display:inline-block!important}}
 @media(max-width:620px){.hero-grid,.grid2,.grid3,.proj-grid,.certs,.stats{grid-template-columns:1fr}}
 .mnav{display:none}
+/* mobile nav dropdown + tight header on small screens */
+#mnav{padding-bottom:14px}
+.mnav-list{display:grid;gap:2px;background:var(--card);border:1px solid var(--card-border);border-radius:12px;padding:8px}
+.mnav-list a{display:block;padding:10px 12px;border-radius:8px;color:var(--text);text-decoration:none}
+.mnav-list a:hover{background:rgba(127,127,127,.14)}
+@media(max-width:960px){.nav{gap:10px}.brand span{display:none}}
 table{width:100%;border-collapse:collapse;margin:1em 0} th,td{border:1px solid var(--card-border);padding:8px 10px;text-align:left} th{background:rgba(255,255,255,.05)}
 img{max-width:100%;height:auto;border-radius:10px}
 blockquote{border-left:3px solid var(--accent2);margin:1em 0;padding:.4em 1em;color:var(--muted);background:var(--card);border-radius:0 10px 10px 0}

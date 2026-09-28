@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects (Hugo copies static/_redirects -> public/_redirects on build).
+# Syntax: <from> <to> <status>. Keep in sync with content aliases.
+/blog/uses/ /uses/ 301

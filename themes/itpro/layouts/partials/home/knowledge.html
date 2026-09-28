@@ -8,7 +8,7 @@
 <li>📚 Operations: troubleshooting guides, onboarding checklists, runbooks, written same-day while the fix is fresh</li></ul>
 <p class="small muted">“The cert proves I passed a test; the work proves I can actually do the job.”</p></div>
 <div class="card"><h3>📖 Browse by topic</h3>
-<p>{{ $cats := slice }}{{ range $kb }}{{ range first 1 (.Params.categories | default slice) }}{{ $cats = $cats | append . }}{{ end }}{{ end }}{{ range ($cats | uniq | sort) }}<a class="tag" href="/categories/{{ . | urlize }}/">{{ . }} ({{ len (where $kb "Params.categories" "intersect" (slice .)) }})</a>{{ end }}</p>
+<p>{{ $cats := slice }}{{ range $kb }}{{ range first 1 (.Params.topics | default slice) }}{{ $cats = $cats | append . }}{{ end }}{{ end }}{{ range ($cats | uniq | sort) }}<a class="tag" href="/topics/{{ . | urlize }}/">{{ . }} ({{ len (where $kb "Params.topics" "intersect" (slice .)) }})</a>{{ end }}</p>
 <p class="small"><a class="btn ghost" href="/knowledge/">All {{ len $kb }} guides →</a></p>
 </div>
 </div>

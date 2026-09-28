@@ -3,7 +3,7 @@ title: "Bypass Microsoft Account Setup in Windows 11"
 date: 2025-05-09
 description: "Create local accounts during Windows 11 setup with the start ms-cxh:localonly command. Steps, enterprise use, privacy notes and limits."
 tags: ["Windows", "Windows 11", "OOBE", "Local Account", "Microsoft Account", "URI Scheme", "Deployment"]
-categories: ["Windows", "System Administration", "Deployment"]
+topics: ["Windows", "System Administration", "Deployment"]
 draft: false
 toc: true
 ---

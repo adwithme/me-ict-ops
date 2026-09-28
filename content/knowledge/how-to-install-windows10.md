@@ -3,7 +3,7 @@ title: "How to Install Windows 10"
 date: 2020-07-26
 description: "Complete step-by-step guide to installing Windows 10 - from creating bootable media to post-installation setup, drivers, and activation."
 tags: ["Windows", "Windows 10", "Installation", "Bootable USB", "Drivers", "Activation", "Setup"]
-categories: ["Windows", "Installation", "Deployment"]
+topics: ["Windows", "Installation", "Deployment"]
 draft: false
 toc: true
 ---

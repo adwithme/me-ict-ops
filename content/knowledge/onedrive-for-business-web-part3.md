@@ -3,7 +3,7 @@ title: "OneDrive on Web Part 3: Permissions, Sharing, Storage"
 date: 2022-08-01
 description: "OneDrive on the web part 3: removing permissions, deleting files, version history and storage metrics. Sharing hygiene included."
 tags: ["OneDrive", "OneDrive for Business", "File Sharing", "Permissions", "Version History", "Storage Management", "Microsoft 365"]
-categories: ["Microsoft 365", "Cloud Storage", "Productivity"]
+topics: ["Microsoft 365", "Cloud Storage", "Productivity"]
 draft: false
 toc: true
 ---

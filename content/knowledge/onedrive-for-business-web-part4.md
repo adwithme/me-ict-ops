@@ -3,7 +3,7 @@ title: "OneDrive on Web Part 4: Desktop Client and Sync"
 date: 2022-08-02
 description: "OneDrive on the web part 4: desktop client setup on Windows. Install, backup, multi-account, Files On-Demand and sync icons explained."
 tags: ["OneDrive", "OneDrive for Business", "Desktop Client", "Sync", "Files On-Demand", "Windows", "Microsoft 365"]
-categories: ["Microsoft 365", "Cloud Storage", "Productivity"]
+topics: ["Microsoft 365", "Cloud Storage", "Productivity"]
 draft: false
 toc: true
 ---

@@ -3,7 +3,7 @@ title: "Linux System Configuration and Log Files"
 date: 2022-07-28
 description: "Comprehensive reference guide to Linux system configuration files and log file locations for troubleshooting and system administration."
 tags: ["Linux", "System Administration", "Configuration Files", "Log Files", "Troubleshooting"]
-categories: ["Linux", "System Administration"]
+topics: ["Linux", "System Administration"]
 draft: false
 toc: true
 ---

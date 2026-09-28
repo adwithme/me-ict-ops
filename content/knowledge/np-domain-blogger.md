@@ -3,7 +3,7 @@ title: "How to Connect .com.np Domain to Blogger"
 date: 2022-06-24
 description: "Step-by-step guide to registering a free .com.np domain and connecting it to Google Blogger with custom DNS configuration."
 tags: ["Nepal", ".np Domain", "Blogger", "DNS", "Domain Configuration", "Free Domain"]
-categories: ["Nepal", "Web Development", "Blogger", "Domain"]
+topics: ["Nepal", "Web Development", "Blogger", "Domain"]
 draft: false
 toc: true
 ---

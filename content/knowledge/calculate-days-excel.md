@@ -3,7 +3,7 @@ title: "Calculate the Number of Days in Excel"
 date: 2022-08-03
 description: "Complete guide to calculating days between dates, working days, age, and date differences in Excel with formulas, functions, and practical examples."
 tags: ["Excel", "Date Functions", "Formulas", "Spreadsheets", "Data Analysis"]
-categories: ["Microsoft 365", "Office Applications", "Data Analysis"]
+topics: ["Microsoft 365", "Office Applications", "Data Analysis"]
 draft: false
 toc: true
 ---

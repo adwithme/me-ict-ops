@@ -1,6 +1,6 @@
 baseURL = 'https://madhusudanupadhyay.com.np/'
 languageCode = 'en-us'
-title = 'Madhusudan Upadhyay — ICT Support Executive | Microsoft 365 & Endpoint Management'
+title = 'Madhusudan Upadhyay'
 theme = 'itpro'
 
 enableRobotsTXT = true
@@ -25,6 +25,7 @@ enableEmoji = false
   tag = 'tags'
   category = 'categories'
   technology = 'technologies'
+  topic = 'topics'
 
 [markup]
   [markup.goldmark]

@@ -4,7 +4,7 @@ date: {{ .Date }}
 draft: false
 description: ""
 tags: []
-categories: ["Windows"]
+topics: ["Windows"]
 technologies: []
 difficulty: Intermediate
 cover: /images/og-default.jpg
